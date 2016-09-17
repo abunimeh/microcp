@@ -14,7 +14,7 @@ Low-cost USB to UART board using CP2102N
 * Low operating current : 9.5mA
 * Remote wakeup for waking a suspended host
 * 16 Standard 0.1" headers to access all CP2102N pins
-* Easy solder-jumper configuration identical to [MicroFTX][ftx]
+* Easy solder-jumper configuration similar to [MicroFTX][ftx]
 * Cross platform support by SiLabs
 * No firmware development required, royalty-free Virtual COM port drivers, and Simple GUI-based configurator by SiLabs
 * See CP2102N datasheet
