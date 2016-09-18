@@ -1,5 +1,5 @@
 # MicroCP
-Low-cost USB to UART board using CP2102N
+Low-cost USB to UART board using CP2102N. See [web page][microcp] for further details.
 
 # Features
 * Open Source
@@ -26,6 +26,7 @@ License
 ----
 [CERN OHL v1.2][CERN_OHL]
 
+[microcp]: <https://abunimeh.github.io/microcp/>
 [ftx]: <http://jim.sh/ftx/>
 [ftdi]: <http://www.ftdichip.com/>
 [CERN_OHL]: <http://www.ohwr.org/cernohl>
