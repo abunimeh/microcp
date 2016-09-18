@@ -17,7 +17,7 @@ Low-cost USB to UART board using CP2102N. See [web page][microcp] for further de
 * Easy solder-jumper configuration similar to [MicroFTX][ftx]
 * Cross platform support by SiLabs
 * No firmware development required, royalty-free Virtual COM port drivers, and Simple GUI-based configurator by SiLabs
-* See CP2102N datasheet
+* See CP2102N [datasheet][CP2102N_DS]
 
 # History
 [MicroFTX][ftx] is a nifty little gadget using FTDI chips to create a USB to serial interface. This work is based on MicroFTX, however, it uses SiLabs' CP2102N chip.
@@ -30,3 +30,4 @@ License
 [ftx]: <http://jim.sh/ftx/>
 [ftdi]: <http://www.ftdichip.com/>
 [CERN_OHL]: <http://www.ohwr.org/cernohl>
+[CP2102N_DS]: <https://abunimeh.github.io/microcp/dl/CP2102N-DataSheet.pdf>
