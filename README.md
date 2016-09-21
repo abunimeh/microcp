@@ -26,7 +26,7 @@ License
 ----
 [CERN OHL v1.2][CERN_OHL]
 
-[microcp]: <https://abunimeh.github.io/microcp/>
+[microcp]: <http://microcp.jood.io>
 [ftx]: <http://jim.sh/ftx/>
 [ftdi]: <http://www.ftdichip.com/>
 [CERN_OHL]: <http://www.ohwr.org/cernohl>
