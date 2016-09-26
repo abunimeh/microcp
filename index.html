@@ -1,37 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>MicroCP by abunimeh</title>
+    <meta name="description" content="MicroCP : Tiny multipurpose USB-to-UART board">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MicroCP</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>MicroCP</h1>
-        <p>Low-cost USB to UART board using CP2102N</p>
 
-        <p class="view"><a href="https://github.com/abunimeh/microcp">View the Project on GitHub <small>abunimeh/microcp</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/abunimeh/microcp">View on GitHub</a>
 
+          <h1 id="project_title">MicroCP</h1>
+          <h2 id="project_tagline">Tiny multipurpose USB-to-UART board</h2>
 
-        <ul>
-          <li><a href="https://github.com/abunimeh/microcp/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/abunimeh/microcp/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/abunimeh/microcp">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/abunimeh/microcp/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/abunimeh/microcp/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h3>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
 
-<p>MicroCP is a low-cost USB-to-UART printed circuit board using CP2102N.</p>
+<p>MicroCP is a low-cost USB-to-UART printed circuit board using CP2102N. It supports multiple I/O voltages for extra flexibility. It can be powered externally or using USB bus power.</p>
 
 <h3>
 <a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
@@ -60,10 +63,71 @@
 <h3>
 <a id="pinout" class="anchor" href="#pinout" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pinout</h3>
 
-<p>MicroCP provides 16 header pins for extra flexibility. Most of these pins are programmable using SiLab EEPROM programmer. The table below summarizes each pin. </p>
+<p>MicroCP provides 16 header pins for extra flexibility. Most of these pins are programmable using SiLab EEPROM programmer. The table below summarizes each pin: </p>
 
 <h3>
 <a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p>MicroCP supports a range GPIO voltages and power sources, i.e., via <em>USB bus</em> or <em>V pin</em>. Four solder jumpers (J1-J4) on the bottom side of the board configure the mode of operation:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>J1</th>
+<th>J2</th>
+<th>J3</th>
+<th>J4</th>
+<th>Power</th>
+<th>V pin</th>
+<th>IO Voltage</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>S</td>
+<td>O</td>
+<td>S</td>
+<td>S</td>
+<td>USB</td>
+<td>out 3.3V</td>
+<td>3.3V</td>
+<td>(DEFAULT) a,b</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>S</td>
+<td>O</td>
+<td>O</td>
+<td>S</td>
+<td>USB</td>
+<td>in 1.8V-3.3V</td>
+<td>1.8-3.3V</td>
+<td>c</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>O</td>
+<td>S</td>
+<td>S</td>
+<td>O</td>
+<td>V pin</td>
+<td>in 3.3V-5V</td>
+<td>3.3V</td>
+<td>a</td>
+</tr>
+</tbody>
+</table>
+
+<p>where <strong>S</strong> represents a <strong>Shorted</strong> jumper and <strong>O</strong> is <strong>Open</strong>. To short a solder jumper, add solder to both pads to create a bridge between them. To open, remove bridged solder, e.g., using wick. To change <strong>DEFAULT</strong> configuration use a knife to cut the trace between the jumper ends.</p>
+
+<p><strong>Notes:</strong></p>
+
+<p>a) I/O voltage is 5V tolerant <br>
+b) 3.3V output current is 100mA max <br>
+c) I/O voltage is set by the voltage applied to the V pin <br></p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
@@ -75,12 +139,17 @@
 
 <p><a href="http://www.ohwr.org/cernohl">CERN OHL v1.2</a></p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/abunimeh">abunimeh</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MicroCP maintained by <a href="https://github.com/abunimeh">abunimeh</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
