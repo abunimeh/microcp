@@ -1,5 +1,5 @@
 # MicroCP
-Low-cost USB to UART board using CP2102N. See [web page][microcp] for further details.
+Tiny multipurpose USB-to-UART board. See [web page][microcp] for further details.
 
 # Features
 * Open Source
